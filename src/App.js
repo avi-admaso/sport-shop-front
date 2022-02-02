@@ -1,5 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+// import ShoesProvider from "./ShoesContext";
+import PantsProvider, { PantsContext } from "./PantsContext";
+import Pants from "./Components/Pants";
+import ShoesProvider from "./ShoesContext";
+import Shoes from "./Components/Shoes";
+
 
 function App() {
   return (
@@ -9,6 +15,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <ShoesProvider> 
+          <Shoes/>
+        </ShoesProvider>
+     {/* <PantsProvider>
+       <Pants/>
+     </PantsProvider> */}
         <a
           className="App-link"
           href="https://reactjs.org"
